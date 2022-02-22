@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TESTISIVUT</title>
+
+    <style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {
+margin-left: 100px;
+margin-right: 100px;
+background-color: white;
+border-style: dotted;;
+border-width: 5px;
+border-radius: 25px;
+padding: 20px;}
+body {background-color: rgb(231, 214, 211);}
+    </style>
+</head>
+<body>
+
+<div>
+
+<h1> Opintorekisteri</h1>
+
+<br>
+
+<h3>Lisää kurssi</h3>
+
+<form method ="post" action="addKurssi" >
+    <label>Kurssin nimi:</label>
+    <input type="text" name="kurssiNimi"><br>
+    <label>Kurssin ID:</label>
+    <input type="text" name="kurssiId"><br>
+
+    <input type="reset" value="Reset"
+           style="background-color: red;
+                        color: white" />
+    <input type="submit" value="submit" style="background-color: green;
+                        color: white" >
+</form>
+
+    <h3>Lisää oppilas</h3>
+
+    <form method ="post" action="addOppilas" >
+        <label>Etunimi:</label>
+        <input type="text" name="oppilasFn"><br>
+        <label>Sukunimi:</label>
+        <input type="text" name="oppilasLn"><br>
+        <label>Oppilas ID:</label>
+        <input type="text" name="oppilasId"><br>
+
+        <input type="reset" value="Reset"
+               style="background-color: red;
+                        color: white" />
+        <input type="submit" value="submit" style="background-color: green;
+                        color: white" >
+    </form>
+
+<h3>Etsi kurssi nimellä:</h3>
+
+<form method="get" action="/SearchKurssi.html">
+    <button type="submit">Siirry</button>
+</form>
+
+<br>
+
+<h3>Etsi kurssi ID:llä</h3>
+
+<form method="get" action="/SearchKurssiId.html">
+    <button type="submit">Siirry</button>
+</form>
+
+
+
+
+</div>
+</body>
+</html>
