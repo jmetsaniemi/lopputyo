@@ -8,13 +8,25 @@ public class Oppilaat {
     private String oppilasFn;
     private String oppilasLn;
     private String oppilasLuokka;
-    private String kurssiId;
+    private int oppilasId;
 
     public Oppilaat(String oppilasFn, String oppilasLn, String oppilasLuokka, String kurssiId) {
         this.oppilasFn = oppilasFn;
         this.oppilasLn = oppilasLn;
         this.oppilasLuokka = oppilasLuokka;
-        this.kurssiId = kurssiId;
+        this.oppilasId = oppilasId;
+    }
+
+    public Oppilaat(int studentId) {
+        this.oppilasId = studentId;
+    }
+
+    public int getStudentId() {
+        return oppilasId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.oppilasId = studentId;
     }
 
     public String getOppilasFn() {

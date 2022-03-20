@@ -8,6 +8,7 @@
 h1 {text-align: center;}
 p {text-align: center;}
 div {
+
 margin-left: 100px;
 margin-right: 100px;
 background-color: white;
@@ -15,7 +16,32 @@ border-style: dotted;;
 border-width: 5px;
 border-radius: 25px;
 padding: 20px;}
+
+div1 {
+flex-direction: row;
+display: flex;
+
+justify-content: space-around;
+background-color: white;
+border-style: solid;
+border-width: 1px;
+border-radius: 5px;
+padding: 5px;}
+
+div2 {
+align-content: space-around;
+display: flex;
+flex-direction: column;
+background-color: white;
+padding: 15px;}
+
+div4 {
+display: flex;
+background-color: white;
+}
+
 body {background-color: rgb(231, 214, 211);}
+input {};}
     </style>
 </head>
 <body>
@@ -26,51 +52,95 @@ body {background-color: rgb(231, 214, 211);}
 
 <br>
 
-<h3>Lisää kurssi</h3>
+    <div2>
 
+        <h3>Etsi kurssi nimellä:</h3>
+
+        <form method="get" action="/SearchKurssi.html">
+            <button type="submit">Siirry</button>
+        </form>
+
+
+
+        <h3>Etsi kurssi ID:llä:</h3>
+
+        <form method="get" action="/SearchKurssiId.html">
+            <button type="submit">Siirry</button>
+        </form>
+
+        <h3>Etsi oppilasta sukunimellä:</h3>
+
+        <form method="get" action="/SearchOppilasByLn.html">
+            <button type="submit">Siirry</button>
+        </form>
+
+        <h3>Etsi kursseja opettajan nimellä:</h3>
+
+        <form method="get" action="/SearchKurssiOpettajalla.html">
+            <button type="submit">Siirry</button>
+        </form>
+
+    </div2>
+
+
+
+    <div1>
+
+        <div4>
 <form method ="post" action="addKurssi" >
+    <h3>Lisää kurssi</h3>
     <label>Kurssin nimi:</label>
+    <br>
     <input type="text" name="kurssiNimi"><br>
     <label>Kurssin ID:</label>
+    <br>
     <input type="text" name="kurssiId"><br>
 
-    <input type="reset" value="Reset"
+    <label>Kurssin opettaja:</label>
+    <br>
+    <input type="text" name="kurssiOpettaja">
+    <br>
+
+    <input type="reset" value="Tyhjennä"
            style="background-color: red;
                         color: white" />
-    <input type="submit" value="submit" style="background-color: green;
+    <input type="submit" value="Tallenna" style="background-color: green;
                         color: white" >
 </form>
+        </div4>
+        <div4>
 
-    <h3>Lisää oppilas</h3>
+
 
     <form method ="post" action="addOppilas" >
+        <h3>Lisää oppilas:</h3>
         <label>Etunimi:</label>
+        <br>
+
         <input type="text" name="oppilasFn"><br>
         <label>Sukunimi:</label>
+        <br>
+
         <input type="text" name="oppilasLn"><br>
         <label>Oppilas ID:</label>
-        <input type="text" name="oppilasId"><br>
+        <br>
 
-        <input type="reset" value="Reset"
+        <input type="text" name="oppilasId"><br>
+        <br>
+
+
+        <input type="reset" value="Tyhjennä"
                style="background-color: red;
                         color: white" />
-        <input type="submit" value="submit" style="background-color: green;
+        <input type="submit" value="Tallenna" style="background-color: green;
                         color: white" >
     </form>
+        </div4>
 
-<h3>Etsi kurssi nimellä:</h3>
 
-<form method="get" action="/SearchKurssi.html">
-    <button type="submit">Siirry</button>
-</form>
+    </div1>
 
-<br>
 
-<h3>Etsi kurssi ID:llä</h3>
-
-<form method="get" action="/SearchKurssiId.html">
-    <button type="submit">Siirry</button>
-</form>
 
 
 

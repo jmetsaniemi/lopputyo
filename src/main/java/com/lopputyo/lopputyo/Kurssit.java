@@ -4,17 +4,27 @@ public class Kurssit {
 
     private String kurssiNimi;
 
-    private String kurssiId;
+    private int kurssiId;
 
-    public String getKurssiId() {
+    private String kurssiOpettaja;
+
+    public String getKurssiOpettaja() {
+        return kurssiOpettaja;
+    }
+
+    public void setKurssiOpettaja(String kurssiOpettaja) {
+        this.kurssiOpettaja = kurssiOpettaja;
+    }
+
+    public int getKurssiId() {
         return kurssiId;
     }
 
-    public void setKurssiId(String kurssiId) {
+    public void setKurssiId(int kurssiId) {
         this.kurssiId = kurssiId;
     }
 
-    public Kurssit(String kurssiId) {
+    public Kurssit(int kurssiId) {
         this.kurssiId = kurssiId;
     }
 

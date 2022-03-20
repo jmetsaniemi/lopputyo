@@ -1,7 +1,5 @@
-32 Joonas Seppo
 1 Narttukello Heikki
 2 Separatistit Heikki
 2 Joonas Heikki
-3 3 3
 32 Testi Heikki
 32 Joonas Heikki
